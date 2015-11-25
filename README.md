@@ -1,5 +1,6 @@
 # pcg
-Go implementation of Melissa O'Neill's excellent PCG pseudorandom number generator, which is well-studied, excellent, and fast both to create and in execution.
+Go implementation of Melissa O'Neill's excellent PCG pseudorandom number generator, which is 
+well-studied, excellent, and fast both to create and in execution.
 
 Performance on a MacBook Pro:
 
