@@ -31,4 +31,3 @@ BenchmarkBounded32-8	200000000	         9.75 ns/op
 BenchmarkNew64-8    	200000000	         6.89 ns/op
 BenchmarkRandom64-8 	200000000	         7.58 ns/op
 BenchmarkBounded64-8	50000000	        25.5 ns/op
-
