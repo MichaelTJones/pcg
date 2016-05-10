@@ -2,6 +2,7 @@
 Go implementation of Melissa O'Neill's excellent PCG pseudorandom number generator, which is 
 well-studied, excellent, and fast both to create and in execution.
 
+````
   Performance on a MacBook Pro:
 
   $ go test -v -bench=.
@@ -31,3 +32,4 @@ well-studied, excellent, and fast both to create and in execution.
   BenchmarkNew64-8      200000000                6.89 ns/op
   BenchmarkRandom64-8   200000000                7.58 ns/op
   BenchmarkBounded64-8  50000000                25.5 ns/op
+````
