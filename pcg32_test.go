@@ -119,6 +119,19 @@ func BenchmarkBounded32(b *testing.B) {
 		// _ = pcg.Bounded(365)           // day of year
 	}
 }
+// Measure the time it takes to generate bounded random values
+func BenchmarkBounded32Fast(b *testing.B) {
+	b.StopTimer()
+	pcg := NewPCG32().Seed(1, 1)
+	b.StartTimer()
+
+	for i := 0; i < b.N; i++ {
+		_ = pcg.FastBounded(uint32(i) & 0xff) // 0..255
+		// _ = pcg.Bounded(6)             // roll of die
+		// _ = pcg.Bounded(52)            // deck of cards
+		// _ = pcg.Bounded(365)           // day of year
+	}
+}
 
 //
 // EXAMPLES
