@@ -33,3 +33,19 @@ well-studied, excellent, and fast both to create and in execution.
   BenchmarkRandom64-8   200000000                7.58 ns/op
   BenchmarkBounded64-8  50000000                25.5 ns/op
 ````
+
+Provided under terms of the Apache license in keeping with Melissa O'Neill's original from which this was ported.
+
+Copyright 2018 Michael T. Jones
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
