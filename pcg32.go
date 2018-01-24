@@ -61,6 +61,24 @@ func (p *PCG32) Bounded(bound uint32) uint32 {
 	}
 }
 
+// as in int31n, go/src/math/rand/rand.go
+// this function uses a single division in the worst case
+func (p *PCG32) FastBounded(bound uint32) uint32 {
+	v := p.Random()
+	prod := uint64(v) * uint64(bound)
+	low := uint32(prod)
+	if low < uint32(bound) {
+		thresh := uint32(-bound) % uint32(bound)
+		for low < thresh {
+			v = p.Random()
+			prod = uint64(v) * uint64(bound)
+			low = uint32(prod)
+		}
+	}
+	return uint32(prod >> 32)
+}
+
+
 func (p *PCG32) Advance(delta uint64) *PCG32 {
 	p.state = p.advanceLCG64(p.state, delta, pcg32Multiplier, p.increment)
 	return p
